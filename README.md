@@ -47,9 +47,3 @@ We appreciate contributions from the community to enhance Movix. If you would li
 The content of this project is licensed under the [MIT License](LICENSE). Feel free to modify and distribute the code, as long as you include the original license and attribution.
 
 Thank you for choosing Movix as your trusted source for movie and show information. We hope you enjoy exploring our website and staying up to date with the latest releases and entertainment news.
-## Acknowledgements
-
- - [Awesome Readme Templates](https://awesomeopensource.com/project/elangosundar/awesome-README-templates)
- - [Awesome README](https://github.com/matiassingers/awesome-readme)
- - [How to write a Good readme](https://bulldogjob.com/news/449-how-to-write-a-good-readme-for-your-github-project)
-
