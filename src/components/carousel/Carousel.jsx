@@ -15,7 +15,10 @@ import CircleRating from "../../components/circleRating/CircleRating"
 
 import './style.scss'
 import Genres from "../genres/Genres";
-const Carousel = ({ data, loading, itemType }) => {
+const Carousel = (props) => {
+    const { data, loading, itemType } = props;
+    // console.log(data);
+    
 
     const carouselContainer = useRef();
     const { url } = useSelector((state) => state.home);
@@ -68,22 +71,22 @@ const Carousel = ({ data, loading, itemType }) => {
                         {data?.map((item) => {
                             const posterUrl = item.poster_path ? url.poster + item.poster_path : PosterFallback
                             return (
-                                    <div
+                                <div
                                     key={item.id}
-                                        className="carouselItem" onClick={(() => navigate(`/${item.media_type === undefined ? itemType : item.media_type}/${item.id}`))} >
-                                        <div className="posterBlock">
-                                            <Img src={posterUrl}
-                                            />
-                                            <CircleRating rating={item.vote_average.toFixed()} />
-                                            <Genres data={item.genre_ids.slice(0, 2)} />
-                                        </div>
-                                        <div className="textBlock">
-                                            <span className="title"> {item.title || item.name} </span>
-
-                                            <span className="date"> {dayjs(item.release_Data).format("MMM, D YYYY")} </span>
-
-                                        </div>
+                                    className="carouselItem" onClick={(() => navigate(`/${item.media_type === undefined ? itemType : item.media_type}/${item.id}`))} >
+                                    <div className="posterBlock">
+                                        <Img src={posterUrl}
+                                        />
+                                        <CircleRating rating={item.vote_average.toFixed()} />
+                                        <Genres data={item.genre_ids.slice(0, 2)} />
                                     </div>
+                                    <div className="textBlock">
+                                        <span className="title"> {item.title || item.name} </span>
+
+                                        <span className="date"> {dayjs(item.release_Data).format("MMM, D YYYY")} </span>
+
+                                    </div>
+                                </div>
                             )
                         })}
                     </div>
@@ -101,5 +104,6 @@ const Carousel = ({ data, loading, itemType }) => {
         </div>
     )
 }
+
 
 export default Carousel
