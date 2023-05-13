@@ -17,7 +17,6 @@ import './style.scss'
 import Genres from "../genres/Genres";
 const Carousel = (props) => {
     const { data, loading, itemType } = props;
-    // console.log(data);
     
 
     const carouselContainer = useRef();
