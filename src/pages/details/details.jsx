@@ -1,11 +1,23 @@
 import React from 'react'
+import { useParams } from 'react-router-dom'
 
 import './style.scss'
 
-const details = () => {
+import useFetch from '../../hooks/useFetch'
+import DetailsBanner from './detailsBanner/DetailsBanner'
+
+const Details = () => {
+
+  // const { mediaType, id } = useParams();
+  // const { data, loading } = useFetch(`/${mediaType}/${id}`)
+  // console.log(data?.homepage);
+  // console.log(loading);
+
   return (
-    <div>details</div>
+    <div>
+      <DetailsBanner />
+    </div>
   )
 }
 
-export default details
+export default Details
