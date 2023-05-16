@@ -1,3 +1,4 @@
+/* eslint-disable react/prop-types */
 import React, { useRef } from "react";
 import {
     BsFillArrowLeftCircleFill,
@@ -16,8 +17,8 @@ import CircleRating from "../../components/circleRating/CircleRating"
 import './style.scss'
 import Genres from "../genres/Genres";
 const Carousel = (props) => {
-    const { data, loading, itemType } = props;
-    
+    const { data, loading, itemType, title } = props;
+
 
     const carouselContainer = useRef();
     const { url } = useSelector((state) => state.home);
@@ -54,6 +55,10 @@ const Carousel = (props) => {
     return (
         <div className="carousel">
             <ContentWrapper>
+
+                {title && (<div className="carouselTitle">
+                    {title}
+                </div>)}
 
                 <BsFillArrowLeftCircleFill
                     className="carouselLeftNav arrow"

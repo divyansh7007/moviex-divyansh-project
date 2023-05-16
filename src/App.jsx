@@ -12,6 +12,7 @@ import Home from './pages/home/home';
 import Details from './pages/details/details';
 import SearchResult from './pages/searchResult/searchResutl';
 import PageNotFound from './pages/404/404';
+import Explore from './pages/explore/explore';
 
 function App() {
   const { url } = useSelector((state) => state.home)
@@ -58,6 +59,7 @@ function App() {
         <Route path='/' element={<Home />} />
         <Route path='/:mediaType/:id' element={<Details />} />
         <Route path='/search/:query' element={<SearchResult />} />
+        <Route path='/explore/:mediaType' element={<Explore />} />
         <Route path='*' element={<PageNotFound />} />
       </Routes>
       <Footer />
