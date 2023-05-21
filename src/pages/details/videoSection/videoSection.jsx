@@ -29,7 +29,7 @@ const VideosSection = ({ data, loading }) => {
                 <div className="sectionHeading">Official Videos</div>
                 {!loading ? (
                     <div className="videos">
-                        {data?.results?.map((video) => {
+                        {data?.results?.length > 0 ? data?.results?.map((video) => {
                             return <div
                                 key={video.id}
                                 className="videoItem"
@@ -45,7 +45,9 @@ const VideosSection = ({ data, loading }) => {
                                 </div>
                                 <div className="videoTitle">{video.name}</div>
                             </div>
-                        })}
+                        }) : <div className="videosNotAvailable">
+                            Sorry, There is No Official Video is Available!
+                        </div>}
                     </div>
                 ) : (
                     <div className="videoSkeleton">

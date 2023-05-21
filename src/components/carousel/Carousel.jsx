@@ -60,15 +60,16 @@ const Carousel = (props) => {
                     {title}
                 </div>)}
 
-                <BsFillArrowLeftCircleFill
+                {data?.length > 5 ? (<React.Fragment><BsFillArrowLeftCircleFill
                     className="carouselLeftNav arrow"
                     onClick={() => navigation('left')}
                 />
 
-                <BsFillArrowRightCircleFill
-                    className="carouselRighttNav arrow"
-                    onClick={() => navigation('right')}
-                />
+                    <BsFillArrowRightCircleFill
+                        className="carouselRighttNav arrow"
+                        onClick={() => navigation('right')}
+                    /></React.Fragment>) : null}
+
 
                 {!loading ? (
                     <div className="carouselItems" ref={carouselContainer}>

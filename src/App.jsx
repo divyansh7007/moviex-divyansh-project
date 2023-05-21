@@ -11,7 +11,7 @@ import Footer from './components/Footer/Footer';
 import Home from './pages/home/home';
 import Details from './pages/details/details';
 import SearchResult from './pages/searchResult/searchResutl';
-import PageNotFound from './pages/404/404';
+import PageNotFound from './pages/404/PageNotFound';
 import Explore from './pages/explore/explore';
 
 function App() {
